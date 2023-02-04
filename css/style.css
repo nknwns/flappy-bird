@@ -1,0 +1,107 @@
+body {
+    padding: 0!important;
+    margin: 0!important;
+    font-family: monospace;
+}
+
+.place:before {
+    content: '';
+    display: block;
+    height: calc(50vh - 250px);
+    width: 100vw;
+    position: absolute;
+    top: calc(-1 * calc(50vh - 250px));
+    background-image: url("../img/base.png");
+    background-color: rgb(222, 216, 149);
+    background-repeat: repeat-x;
+    transform: rotateX(180deg);
+}
+
+.place:after {
+    content: '';
+    display: block;
+    height: calc(50vh - 250px);
+    width: 100vw;
+    position: absolute;
+    bottom: calc(-1 * calc(50vh - 250px));
+    background-image: url("../img/base.png");
+    background-color: rgb(222, 216, 149);
+    background-repeat: repeat-x;
+}
+
+.place {
+    display: block;
+    width: 100vw;
+    height: 500px;
+    position: relative;
+    margin-top: calc(50vh - 250px);
+    background-image: url("../img/background.png");
+    background-color: rgb(78, 192, 202);
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+
+.place .player {
+    display: none;
+    height: 34px;
+    width: 49px;
+    left: calc(50% - 25px);
+    position: absolute;
+    background-image: url('../img/user.png');
+    background-size: cover;
+
+}
+
+.place a {
+    font-size: 30px;
+    display: block;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 106px);
+    padding: 10px 30px;
+    background: #34ce57;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all .5s ease;
+    border: 2px solid black;
+}
+
+.place a:hover {
+    color: black;
+    background-color: rgb(78, 192, 202);
+}
+
+.place a.restart {
+    display: none;
+    background-color: #dc3545;
+}
+
+.place .pipes .pipe {
+    position: absolute;
+    width: 52px;
+    display: none;
+    background-image: url("../img/pipe-helper.png");
+}
+
+.place .pipes .pipe .header {
+    background-image: url("../img/pipe-header.png");
+    display: block;
+    height: 24px;
+    width: 52px;
+}
+
+.place .pipes .pipe#top {
+    transform: rotateX(180deg);
+    top: 0;
+}
+
+.place .pipes .pipe#bottom {
+    bottom: 0;
+}
+
+.place .scores {
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
